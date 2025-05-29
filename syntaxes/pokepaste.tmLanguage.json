@@ -1,0 +1,98 @@
+{
+  "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+  "name": "Pokepaste",
+  "patterns": [
+    {
+      "include": "#pokemon-section"
+    }
+  ],
+  "repository": {
+    "pokemon-section": {
+      "patterns": [
+        {
+          "include": "#ability-line"
+        },
+        {
+          "include": "#tera-type"
+        },
+        {
+          "include": "#stat-line"
+        },
+        {
+          "include": "#stat"
+        },
+        {
+          "include": "#nature-line"
+        },
+        {
+          "include": "#moves"
+        },
+        {
+          "include": "#pokemon-header"
+        }
+      ]
+    },
+    "pokemon-header": {
+      "match": "^([A-Za-z0-9:\\- ]{2,}\\b)(?: \\(([A-Za-z0-9:\\- ]{2,})\\))?(?: \\((M|F)\\))?(?: @ )?(.+)?$",
+      "captures": {
+        "1": { "name": "entity.name.class.pokemon.pokepaste" },
+        "2": { "name": "entity.name.class.pokemon.pokepaste" },
+        "3": {
+          "patterns": [
+            {
+              "match": "M",
+              "name": "constant.character.gender.male.pokepaste"
+            },
+            {
+              "match": "F",
+              "name": "constant.character.gender.female.pokepaste"
+            }
+          ]
+        },
+        "4": { "name": "constant.language.item.pokepaste" }
+      }
+    },
+    "ability-line": {
+      "match": "^(Ability:) (.+)$",
+      "captures": {
+        "1": { "name": "comment" },
+        "2": { "name": "constant.language.ability.pokepaste" }
+      }
+    },
+    "tera-type": {
+      "match": "^(Tera Type:) (.+)$",
+      "captures": {
+        "1": { "name": "comment" },
+        "2": { "name": "constant.language.type.pokepaste" }
+      }
+    },
+    "stat-line": {
+      "match": "^((?:E|I)Vs:)",
+      "captures": {
+        "1": { "name": "comment" }
+      }
+    },
+    "stat": {
+      "match": "\\b(\\d+) (HP|Atk|Def|SpA|SpD|Spe)\\b",
+      "captures": {
+        "1": { "name": "constant.numeric.stat.pokepaste" },
+        "2": { "name": "keyword.control.stat.pokepaste" }
+      }
+    },
+    "nature-line": {
+      "match": "^([A-Za-z]+) (Nature)$",
+      "captures": {
+        "1": { "name": "constant.language.nature.pokepaste" },
+        "2": { "name": "comment" }
+      }
+    },
+    "moves": {
+      "match": "^- ([A-Za-z \\-]+)(?: \\[(\\w+)\\])?$",
+      "captures": {
+        "1": { "name": "string.other.move.pokepaste" },
+        "2": { "name": "constant.language.type.pokepaste" }
+      }
+    }
+  },
+  "scopeName": "source.pokepaste"
+}

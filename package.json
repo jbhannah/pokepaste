@@ -17,6 +17,25 @@
         "command": "pokepaste.helloWorld",
         "title": "Hello World"
       }
+    ],
+    "languages": [
+      {
+        "id": "pokepaste",
+        "aliases": [
+          "Poképaste"
+        ],
+        "extensions": [
+          "pkp"
+        ],
+        "configuration": "./language-configuration.json"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "pokepaste",
+        "scopeName": "source.pokepaste",
+        "path": "./syntaxes/pokepaste.tmLanguage.json"
+      }
     ]
   },
   "scripts": {
