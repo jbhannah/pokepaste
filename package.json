@@ -3,6 +3,7 @@
   "displayName": "pokepaste",
   "description": "Poképaste language support for VS Code",
   "version": "0.1.0",
+  "publisher": "jbhannah",
   "license": "MIT",
   "repository": {
     "type": "git",
