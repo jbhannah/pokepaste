@@ -1,7 +1,7 @@
 {
   "name": "pokepaste",
-  "displayName": "pokepaste",
-  "description": "Poképaste language support for VS Code",
+  "displayName": "PokéPaste",
+  "description": "PokéPaste language support for Visual Studio Code.",
   "version": "0.1.0",
   "publisher": "jbhannah",
   "license": "MIT",
@@ -26,7 +26,7 @@
       {
         "id": "pokepaste",
         "aliases": [
-          "Poképaste"
+          "PokéPaste"
         ],
         "extensions": [
           "pkp"
