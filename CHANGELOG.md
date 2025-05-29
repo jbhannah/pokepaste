@@ -6,7 +6,7 @@ Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how 
 
 ## Unreleased
 
-- Fix display names
+- Add PokéPaste upload support
 
 ## v0.1.0 (2025-05-29)
 

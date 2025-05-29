@@ -1,10 +1,11 @@
 # PokéPaste for VS Code
 
-PokéPaste syntax highlighting for Visual Studio Code.
+PokéPaste language support for Visual Studio Code.
 
 ## Features
 
 - Basic highlighting for PokéPaste formatted `.pkp` files.
+- Uploading teams directly to [PokéPaste](https://pokepast.es/).
 
 ## Credits
 

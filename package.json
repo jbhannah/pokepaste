@@ -22,6 +22,21 @@
   "activationEvents": [],
   "main": "./dist/extension.js",
   "contributes": {
+    "commands": [
+      {
+        "command": "pokepaste.upload",
+        "title": "Upload",
+        "category": "PokePaste"
+      }
+    ],
+    "menus": {
+      "commandPalette": [
+        {
+          "command": "pokepaste.upload",
+          "when": "editorLangId == pokepaste"
+        }
+      ]
+    },
     "languages": [
       {
         "id": "pokepaste",
