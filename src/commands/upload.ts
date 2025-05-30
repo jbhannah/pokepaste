@@ -45,8 +45,8 @@ export async function upload(textEditor: vscode.TextEditor) {
       placeHolder: "Enter any notes for your team",
     });
 
-    const response = await doUpload(paste, title, author, notes);
-    vscode.env.clipboard.writeText(response.url);
+    const { url } = await doUpload(paste, title, author, notes);
+    await vscode.env.clipboard.writeText(url);
 
     vscode.window
       .showInformationMessage(
@@ -55,8 +55,7 @@ export async function upload(textEditor: vscode.TextEditor) {
       )
       .then(
         (selection) =>
-          selection === "Open" &&
-          vscode.env.openExternal(vscode.Uri.parse(response.url))
+          selection === "Open" && vscode.env.openExternal(vscode.Uri.parse(url))
       );
   } catch (error) {
     vscode.window.showErrorMessage(
